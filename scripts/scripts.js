@@ -22,7 +22,7 @@ const addbtn = document.querySelector(".blue_button");
 let notelist = [{title: '', body: ''}];
 
 function save(){
-    var newtitle = prompt("Please enter a title for your note: ");
+    var newtitle = prompt("Please enter the date: ");
     notelist.push({title: newtitle, body: textarea1.value});
 }
 
