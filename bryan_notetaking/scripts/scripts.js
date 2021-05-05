@@ -18,11 +18,12 @@ save button function:
 const btn = document.querySelector(".darkbutton");
 const rightcolor = document.querySelector(".right");
 const leftcolor = document.querySelector(".left");
-const cancelbtn = document.querySelector(".cancelbutton");
+// const cancelbtn = document.querySelector(".cancelbutton");
 const savebtn = document.querySelector(".savebutton");
 const newnotebtn = document.querySelector(".newnote");
 const textarea1 = document.querySelector(".notesarea");
 const list = document.querySelector(".notes");
+const addbtn = document.querySelector(".add")
 
 let notelist = [{title: 'note one', body: 'this is my first note'}];
 
@@ -83,8 +84,8 @@ function showbody(e){
 
 btn.addEventListener("click", darkMode);
 btn.addEventListener("click", changeButtonText);
-cancelbtn.addEventListener("click", cancel);
+// cancelbtn.addEventListener("click", cancel);
 newnotebtn.addEventListener("click", newnote);
-savebtn.addEventListener("click", save);
-savebtn.addEventListener("click", populatelist);
-list.addEventListener("click", showbody, false)
+addbtn.addEventListener("click", save);
+addbtn.addEventListener("click", populatelist);
+list.addEventListener("click", showbody, false);
