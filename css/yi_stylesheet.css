@@ -41,6 +41,7 @@ nav li {
 
 .entries ul {
     list-style-type: none;
+    padding: 0 20%;
 }
 
 .entries h2 {
