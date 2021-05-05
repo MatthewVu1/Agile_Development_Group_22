@@ -15,46 +15,11 @@ save button function:
 -create new element using document.createElement() using title name variable
 -add to nav using .appendChild()*/
 
-const btn = document.querySelector(".darkbutton");
-const rightcolor = document.querySelector(".right");
-const leftcolor = document.querySelector(".left");
-// const cancelbtn = document.querySelector(".cancelbutton");
-const savebtn = document.querySelector(".savebutton");
-const newnotebtn = document.querySelector(".newnote");
-const textarea1 = document.querySelector(".notesarea");
-const list = document.querySelector(".notes");
-const addbtn = document.querySelector(".add")
+const textarea1 = document.querySelector(".text-area");
+const list = document.querySelector(".weight");
+const addbtn = document.querySelector(".blue_button");
 
-let notelist = [{title: 'note one', body: 'this is my first note'}];
-
-function darkMode(){
-    rightcolor.classList.toggle("dark-mode");
-    leftcolor.classList.toggle("dark-mode");
-}
-
-function changeButtonText(){
-    if (btn.textContent === "Dark Mode"){
-        btn.textContent = "Light Mode";
-    } else {
-        btn.textContent = "Dark Mode"
-    }
-}
-
-function cancel(){
-    textarea1.style.display = 'none';
-    cancelbtn.style.display = 'none';
-    savebtn.style.display = 'none';
-}
-
-function newnote(){
-    if (cancelbtn.style.display === 'none'){
-        textarea1.style.display = 'block';
-        cancelbtn.style.display = 'block';
-        savebtn.style.display = 'block';
-    } else {
-        textarea1.value='';
-    }
-}
+let notelist = [{title: '', body: ''}];
 
 function save(){
     var newtitle = prompt("Please enter a title for your note: ");
@@ -62,7 +27,6 @@ function save(){
 }
 
 function populatelist() {
-    list.innerHTML='';
     for (let item of notelist) {
         let elem = document.createElement("li");
         let text = document.createTextNode(item.title);
@@ -82,10 +46,6 @@ function showbody(e){
     }
 }
 
-btn.addEventListener("click", darkMode);
-btn.addEventListener("click", changeButtonText);
-// cancelbtn.addEventListener("click", cancel);
-newnotebtn.addEventListener("click", newnote);
 addbtn.addEventListener("click", save);
 addbtn.addEventListener("click", populatelist);
 list.addEventListener("click", showbody, false);
