@@ -21,6 +21,7 @@ header{
 .right{
     height: 100vh;
     background-color: #f2e9de;
+    align-items: center;
 }
 
 nav{
@@ -76,9 +77,7 @@ button{
 }
 
 .rightwrap{
-    display:grid;
-    grid-template-rows: 1fr 10fr;
-    grid-gap: 20px;
+    align-items: center;
 }
 
 footer{
@@ -86,7 +85,12 @@ footer{
     margin-bottom: 0;
 }
 
+.entry{
+    display: inline-flex;
+    align-items: center;
+}
+
 textarea{
-    width: 100%;
-    height: 100%;
+    width: 30%;
+    height: 20px;
 }
