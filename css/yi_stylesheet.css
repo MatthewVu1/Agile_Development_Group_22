@@ -69,6 +69,14 @@ button {
 .blue_button {
     background-color: #56949f;
 }
+.weight_button {
+    background-color: cornflowerblue;
+    float: left;
+    margin-left: 800px;
+    position: relative;
+    top: -330px;
+    left: 250px;
+}
 
 .text-box {
     display: flex;
