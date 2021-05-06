@@ -18,7 +18,6 @@ save button function:
 const textarea1 = document.querySelector(".text-area");
 const list = document.querySelector(".weight");
 const addbtn = document.querySelector(".blue_button");
-const weightbtn = document.querySelector(".weight_button")
 
 let notelist = [{title: '', body: ''}];
 
@@ -46,11 +45,7 @@ function showbody(e){
         }
     }
 }
-function weight(){
-    
-}
 
 addbtn.addEventListener("click", save);
 addbtn.addEventListener("click", populatelist);
-addbtn.addEventListener("click", weight)
 list.addEventListener("click", showbody, false);
