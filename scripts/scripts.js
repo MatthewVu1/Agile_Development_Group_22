@@ -33,10 +33,10 @@ function units() {
 function save(){
     var newtitle = prompt("Please enter the date: ");
     if (lb === false){
-        notelist.push({title: newtitle, body: textarea1.value + ' kg'});
+        notelist.push({title: newtitle, body: textarea1.value + 'kg'});
     }
     if (lb === true){
-        notelist.push({title: newtitle, body: textarea1.value + ' lbs'});
+        notelist.push({title: newtitle, body: textarea1.value + 'lbs'});
     }
 }
 
