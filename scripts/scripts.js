@@ -18,6 +18,7 @@ save button function:
 const textarea1 = document.querySelector(".text-area");
 const list = document.querySelector(".weight");
 const addbtn = document.querySelector(".blue_button");
+// const unitWeight = document.querySelector(".weight-toggle")
 
 let notelist = [{title: '', body: ''}];
 
@@ -26,11 +27,26 @@ function save(){
     notelist.push({title: newtitle, body: textarea1.value});
 }
 
+// let lb = false;
+
+// function units() {
+//     lb = !lb
+
+// }
+
 function populatelist() {
+    list.innerHTML= "";
     for (let item of notelist) {
         let elem = document.createElement("li");
         let text = document.createTextNode(item.title);
         elem.appendChild(text);
+        // if (lb) {
+        //     elem.appendChild(text + 'lb');
+        // }
+
+        // else {
+        //     elem.appendChild(text + 'kg');
+        // }
         list.appendChild(elem);
     }
 }
@@ -41,6 +57,7 @@ function showbody(e){
         for (let item of notelist) {
             if (item.title === clickedNote){
                 textarea1.value = item.body;
+
             }
         }
     }
@@ -49,3 +66,4 @@ function showbody(e){
 addbtn.addEventListener("click", save);
 addbtn.addEventListener("click", populatelist);
 list.addEventListener("click", showbody, false);
+// unitWeight.addEventListener("click", units);
