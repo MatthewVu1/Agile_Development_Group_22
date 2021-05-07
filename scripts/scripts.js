@@ -27,6 +27,7 @@ function save(){
 }
 
 function populatelist() {
+    list.innerHTML='';
     for (let item of notelist) {
         let elem = document.createElement("li");
         let text = document.createTextNode(item.title);
