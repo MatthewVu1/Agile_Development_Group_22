@@ -26,12 +26,14 @@ let lb = false;
 
 function units() {
     lb = !lb
-
 }
 
 
 function save(){
     var newtitle = prompt("Please enter the date: ");
+    if (newtitle === null) {
+        return;
+    }
     if (lb === false){
         notelist.push({title: newtitle, body: textarea1.value + 'kg'});
     }
@@ -39,6 +41,7 @@ function save(){
         notelist.push({title: newtitle, body: textarea1.value + 'lbs'});
     }
 }
+
 
 
 function populatelist() {
