@@ -29,13 +29,39 @@
             <ul class='weight'>
             </ul>
         </div>
-
+        <form>
+               <div class="form-group">
+                    <input id="lbsInput" type="number" class=" form-control form-control-lg" placeholder="Input Value..." autocomplete="off">
+                </div>
+            <div class="col col-4">
+			<select id="selectOption" name="selectOption" class="form-control form-control-lg">
+				<option selected value="default">From...</option>
+				<option value="kg">Kg</option>
+				<option value="pound" >Pound</option>
+			  </select>
+		    </div>
+        </form>
+        
+        <div id="output">
+             <div class="card card-primary mb-2">
+                <div class="card-block">
+                    <h4>Pound:</h4>
+                    <div id="poundOutput"></div>
+                </div>
+             </div>
+        
+             <div class="card card-seconday mb-2">
+                <div class="card-block">
+                    <h4>Kilograms:</h4>
+                    <div id="kgOutput"></div>
+                </div>
+             </div> 
+        </div>
         <div class="text-box">
             <textarea class ='text-area' placeholder="Please enter a weight"></textarea>
             <div class="weight-toggle">
                 <input type="checkbox">
                 <div class="slider round"></div>
-           </div>
         </div>
 
         <div class="bottom center">
