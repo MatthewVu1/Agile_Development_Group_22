@@ -15,63 +15,60 @@ save button function:
 -create new element using document.createElement() using title name variable
 -add to nav using .appendChild()*/
 
-const btn = document.querySelector(".darkbutton");
-const rightcolor = document.querySelector(".right");
-const leftcolor = document.querySelector(".left");
-// const cancelbtn = document.querySelector(".cancelbutton");
-const savebtn = document.querySelector(".savebutton");
-const newnotebtn = document.querySelector(".newnote");
-const textarea1 = document.querySelector(".notesarea");
-const list = document.querySelector(".notes");
-const addbtn = document.querySelector(".add")
+const textarea1 = document.querySelector(".text-area");
+const list = document.querySelector(".weight");
+const plan = document.querySelector(".plan")
+const addbtn = document.querySelector(".blue_button");
+const planbtn = document.querySelector(".plan_button")
+const unitWeight = document.querySelector(".weight-toggle")
 
-let notelist = [{title: 'note one', body: 'this is my first note'}];
+let notelist = [{title: '', body: ''}];
+let planlist = [{title: '', body: ''}];
 
-function darkMode(){
-    rightcolor.classList.toggle("dark-mode");
-    leftcolor.classList.toggle("dark-mode");
+let lb = false;
+
+function units() {
+    lb = !lb
+
 }
 
-function changeButtonText(){
-    if (btn.textContent === "Dark Mode"){
-        btn.textContent = "Light Mode";
-    } else {
-        btn.textContent = "Dark Mode"
+function save(wlist){
+    var newtitle = prompt("Please enter the date: ");
+    if (wlist === notelist){
+        if (lb === false){
+            wlist.push({title: newtitle, body: textarea1.value + 'kg'});
+        }
+        if (lb === true){
+            wlist.push({title: newtitle, body: textarea1.value + 'lbs'});
+        }
+    }
+    if (wlist === planlist){
+        wlist.push({title: newtitle, body: textarea1.value});
     }
 }
 
-function cancel(){
-    textarea1.style.display = 'none';
-    cancelbtn.style.display = 'none';
-    savebtn.style.display = 'none';
-}
 
-function newnote(){
-    if (cancelbtn.style.display === 'none'){
-        textarea1.style.display = 'block';
-        cancelbtn.style.display = 'block';
-        savebtn.style.display = 'block';
-    } else {
-        textarea1.value='';
+function populatelist(loc) {
+    loc.innerHTML= '';
+    if (loc === list){
+        for (let item of notelist) {
+            let elem = document.createElement("li");
+            let text = document.createTextNode(item.title);
+            elem.appendChild(text);
+            loc.appendChild(elem);
+        }
+    }
+    if (loc === plan){
+        for (let item of planlist) {
+            let elem = document.createElement("li");
+            let text = document.createTextNode(item.title);
+            elem.appendChild(text);
+            loc.appendChild(elem);
+        }
     }
 }
 
-function save(){
-    var newtitle = prompt("Please enter a title for your note: ");
-    notelist.push({title: newtitle, body: textarea1.value});
-}
-
-function populatelist() {
-    list.innerHTML='';
-    for (let item of notelist) {
-        let elem = document.createElement("li");
-        let text = document.createTextNode(item.title);
-        elem.appendChild(text);
-        list.appendChild(elem);
-    }
-}
-
-function showbody(e){
+function showbodyweight(e){
     if (e.target !== e.currentTarget){
         var clickedNote = e.target.textContent;
         for (let item of notelist) {
@@ -82,10 +79,30 @@ function showbody(e){
     }
 }
 
-btn.addEventListener("click", darkMode);
-btn.addEventListener("click", changeButtonText);
-// cancelbtn.addEventListener("click", cancel);
-newnotebtn.addEventListener("click", newnote);
-addbtn.addEventListener("click", save);
-addbtn.addEventListener("click", populatelist);
-list.addEventListener("click", showbody, false);
+function showbodyplan(e){
+    if (e.target !== e.currentTarget){
+        var clickedNote = e.target.textContent;
+        for (let item of planlist) {
+            if (item.title === clickedNote){
+                textarea1.value = item.body;
+            }
+        }
+    }
+}
+document.getElementById("output").style.visibility='hidden';
+document.getElementById("lbsInput").addEventListener('input',
+   function(e){
+    document.getElementById("output").style.visibility ="visible";
+    let lbs = e.target.value;
+    document.getElementById('poundOutput').innerHTML=lbs *1
+	document.getElementById('kgOutput').innerHTML = lbs /2.2046
+});
+
+
+addbtn.addEventListener("click", save.bind(null, notelist), false);
+addbtn.addEventListener("click", populatelist.bind(null, list));
+planbtn.addEventListener("click", save.bind(null, planlist), false);
+planbtn.addEventListener("click", populatelist.bind(null, plan), false);
+list.addEventListener("click", showbodyweight, false);
+plan.addEventListener("click", showbodyplan, false);
+unitWeight.addEventListener("click", units);

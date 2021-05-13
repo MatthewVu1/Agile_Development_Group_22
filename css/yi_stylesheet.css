@@ -39,8 +39,14 @@ nav li {
     width: 100%;
 }
 
-.entries ul {
+.weight {
     list-style-type: none;
+    padding: 0 20%;
+}
+
+.plan {
+    list-style-type: none;
+    padding: 0 80%;
 }
 
 .entries h2 {
@@ -52,7 +58,29 @@ main {
     display: grid;
     grid-template-rows: 1fr 0.2fr 1.2fr;
 }
-
+.container{
+    text-align: center;
+    height: 80px;
+    width: 20%;
+    position: absolute;
+}
+.col-md-6{
+    justify-content: center;
+    margin-top: 60px;
+}
+.card-primary{
+    background-color:#0275d8;
+}
+.card-primary h4{
+    color: #000;
+}
+.card-success{
+    background-color: #5cb85c;
+    align-items: center;
+}
+.card-success h4{
+    color: #000;
+}
 
 button {
     color: white;
@@ -67,6 +95,65 @@ button {
 
 .blue_button {
     background-color: #56949f;
+    margin-left: -600px;
+    margin-right: 40px;
+    margin-top: 40px;
+    
+}
+.weight-toggle {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    pointer-events: none;
+    background-color: cornflowerblue;
+    align-items: center;
+    left: 0.5vw;
+}
+.weight-toggle input {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: all;
+}
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    left: 8px;
+    bottom: 8px;
+    background-color: #fff;
+    transition: 0.2s;
+    pointer-events: none;
+}
+.slider::after {
+    position: absolute;
+    content: "kg";
+    height: 24px;
+    width: 24px;
+    right: 10px;
+    bottom: 6px;
+    transition: 0.2s;
+    pointer-events: none;
+    color: #fff;
+}
+input:checked + .slider {
+    background-color: #2196f3;
+}
+input:checked + .slider:before {
+    transform: translateX(40px);
+}
+input:checked + .slider:after {
+    content: "lb";
+    left: 8px;
+}
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
 }
 
 .text-box {
@@ -80,6 +167,7 @@ textarea {
     width: 30%;
     height: 20px;
     font-size: 1em;
+    resize: none;
 }
 
 @media screen and (max-width: 600px) {
