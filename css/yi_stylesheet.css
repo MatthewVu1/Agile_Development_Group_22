@@ -81,9 +81,6 @@ main {
 .card-success h4{
     color: #000;
 }
-.output{
-   visibility: hidden;
-}
 
 button {
     color: white;
@@ -98,6 +95,9 @@ button {
 
 .blue_button {
     background-color: #56949f;
+    margin-left: -600px;
+    margin-right: 40px;
+    margin-top: 40px;
     
 }
 .weight-toggle {
