@@ -39,15 +39,16 @@ nav li {
     margin: 6vh 0;
 }
 
-.entries ul {
+.weight {
     list-style-type: none;
     padding: 0 20%;
     cursor: pointer;
 }
 
-/* .entries:hover ul {
-    color: red;
-} */
+.plan {
+    list-style-type: none;
+    padding: 0 80%;
+}
 
 .entries h2 {
     text-align: center;
@@ -58,7 +59,29 @@ main {
     display: grid;
     grid-template-rows: 1fr 0.2fr 1.2fr;
 }
-
+.container{
+    text-align: center;
+    height: 80px;
+    width: 20%;
+    position: absolute;
+}
+.col-md-6{
+    justify-content: center;
+    margin-top: 70px;
+}
+.card-primary{
+    background-color:#0275d8;
+}
+.card-primary h4{
+    color: #000;
+}
+.card-success{
+    background-color: #5cb85c;
+    align-items: center;
+}
+.card-success h4{
+    color: #000;
+}
 
 button {
     color: white;
@@ -126,6 +149,7 @@ input:checked + .slider:after {
 .slider.round:before {
     border-radius: 50%;
 }
+
 .text-box {
     display: flex;
     justify-content: center;

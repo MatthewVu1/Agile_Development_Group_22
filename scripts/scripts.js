@@ -17,27 +17,13 @@ save button function:
 
 const textarea1 = document.querySelector(".text-area");
 const list = document.querySelector(".weight");
+const plan = document.querySelector(".plan")
 const addbtn = document.querySelector(".blue_button");
+const planbtn = document.querySelector(".plan_button")
 const unitWeight = document.querySelector(".weight-toggle")
 
-let notelist = [
-    {
-        title: '05/03/2021', 
-        body: '65.0kg'
-    },
-    {
-        title: '05/04/2021', 
-        body: '65.1kg'
-    },
-    {
-        title: '05/05/2021', 
-        body: '64.9kg'
-    },
-    {
-        title: '05/06/2021', 
-        body: '64.8kg'
-    }
-];
+let notelist = [{title: '', body: ''}];
+let planlist = [{title: '', body: ''}];
 
 let lb = false;
 
@@ -45,45 +31,78 @@ function units() {
     lb = !lb
 }
 
-
-function save(){
+function save(wlist){
     var newtitle = prompt("Please enter the date: ");
-    if (newtitle === null) {
-        return;
+    if (wlist === notelist){
+        if (lb === false){
+            wlist.push({title: newtitle, body: textarea1.value + 'kg'});
+        }
+        if (lb === true){
+            wlist.push({title: newtitle, body: textarea1.value + 'lbs'});
+        }
     }
-    if (lb === false){
-        notelist.push({title: newtitle, body: textarea1.value + 'kg'});
-    }
-    if (lb === true){
-        notelist.push({title: newtitle, body: textarea1.value + 'lbs'});
-    }
-}
-
-
-
-function populatelist() {
-    list.innerHTML= "";
-    for (let item of notelist) {
-        let elem = document.createElement("li");
-        let text = document.createTextNode(item.title);
-        elem.appendChild(text);
-        list.appendChild(elem);
+    if (wlist === planlist){
+        wlist.push({title: newtitle, body: textarea1.value});
     }
 }
 
-function showbody(e){
+
+function populatelist(loc) {
+    loc.innerHTML= '';
+    if (loc === list){
+        for (let item of notelist) {
+            let elem = document.createElement("li");
+            let text = document.createTextNode(item.title);
+            elem.appendChild(text);
+            loc.appendChild(elem);
+        }
+    }
+    if (loc === plan){
+        for (let item of planlist) {
+            let elem = document.createElement("li");
+            let text = document.createTextNode(item.title);
+            elem.appendChild(text);
+            loc.appendChild(elem);
+        }
+    }
+}
+
+function showbodyweight(e){
     if (e.target !== e.currentTarget){
         var clickedNote = e.target.textContent;
         for (let item of notelist) {
             if (item.title === clickedNote){
                 textarea1.value = item.body;
-
             }
         }
     }
 }
 
-addbtn.addEventListener("click", save);
-addbtn.addEventListener("click", populatelist);
-list.addEventListener("click", showbody, false);
+function showbodyplan(e){
+    if (e.target !== e.currentTarget){
+        var clickedNote = e.target.textContent;
+        for (let item of planlist) {
+            if (item.title === clickedNote){
+                textarea1.value = item.body;
+            }
+        }
+    }
+}
+
+document.getElementById("output").style.visibility="hidden";
+document.getElementById("lbsInput").addEventListener('input',
+   function(e){
+    document.getElementById("output").style.visibility ="visible";
+    let lbs = e.target.value;
+    document.getElementById('poundOutput').innerHTML=lbs *1
+	document.getElementById('kgOutput').innerHTML = lbs /2.2046
+});
+
+
+addbtn.addEventListener("click", save.bind(null, notelist), false);
+addbtn.addEventListener("click", populatelist.bind(null, list));
+planbtn.addEventListener("click", save.bind(null, planlist), false);
+planbtn.addEventListener("click", populatelist.bind(null, plan), false);
+list.addEventListener("click", showbodyweight, false);
+plan.addEventListener("click", showbodyplan, false);
 unitWeight.addEventListener("click", units);
