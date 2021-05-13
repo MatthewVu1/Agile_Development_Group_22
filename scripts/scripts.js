@@ -89,15 +89,15 @@ function showbodyplan(e){
         }
     }
 }
-document.getElementById("output").style.visibility='hidden';
+
+document.getElementById("output").style.visibility="hidden";
 document.getElementById("lbsInput").addEventListener('input',
-   function(e){
+function(e){
     document.getElementById("output").style.visibility ="visible";
     let lbs = e.target.value;
     document.getElementById('poundOutput').innerHTML=lbs *1
 	document.getElementById('kgOutput').innerHTML = lbs /2.2046
 });
-
 
 addbtn.addEventListener("click", save.bind(null, notelist), false);
 addbtn.addEventListener("click", populatelist.bind(null, list));
@@ -106,3 +106,14 @@ planbtn.addEventListener("click", populatelist.bind(null, plan), false);
 list.addEventListener("click", showbodyweight, false);
 plan.addEventListener("click", showbodyplan, false);
 unitWeight.addEventListener("click", units);
+
+const functions = {
+    delete_weight: (notelist) => {
+        pass
+    }
+    
+}
+
+module.exports = functions
+
+
