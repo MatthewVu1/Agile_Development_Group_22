@@ -20,7 +20,24 @@ const list = document.querySelector(".weight");
 const addbtn = document.querySelector(".blue_button");
 const unitWeight = document.querySelector(".weight-toggle")
 
-let notelist = [{title: '', body: ''}];
+let notelist = [
+    {
+        title: '05/03/2021', 
+        body: '65.0kg'
+    },
+    {
+        title: '05/04/2021', 
+        body: '65.1kg'
+    },
+    {
+        title: '05/05/2021', 
+        body: '64.9kg'
+    },
+    {
+        title: '05/06/2021', 
+        body: '64.8kg'
+    }
+];
 
 let lb = false;
 
@@ -45,7 +62,7 @@ function save(){
 
 
 function populatelist() {
-    list.innerHTML= '';
+    list.innerHTML= "";
     for (let item of notelist) {
         let elem = document.createElement("li");
         let text = document.createTextNode(item.title);

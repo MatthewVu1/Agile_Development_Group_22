@@ -42,7 +42,12 @@ nav li {
 .entries ul {
     list-style-type: none;
     padding: 0 20%;
+    cursor: pointer;
 }
+
+/* .entries:hover ul {
+    color: red;
+} */
 
 .entries h2 {
     text-align: center;
