@@ -39,9 +39,14 @@ nav li {
     width: 100%;
 }
 
-.entries ul {
+.weight {
     list-style-type: none;
     padding: 0 20%;
+}
+
+.plan {
+    list-style-type: none;
+    padding: 0 80%;
 }
 
 .entries h2 {
