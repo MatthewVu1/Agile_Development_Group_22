@@ -17,7 +17,7 @@ save button function:
 
 const textarea1 = document.querySelector(".text-area");
 const list = document.querySelector(".weight");
-const plan = document.querySelector(".plan")
+const plan = document.querySelector("#plan")
 const addbtn = document.querySelector(".blue_button");
 const planbtn = document.querySelector(".plan_button")
 const unitWeight = document.querySelector(".weight-toggle")
