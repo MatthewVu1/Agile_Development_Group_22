@@ -22,7 +22,7 @@ const unitWeight = document.querySelector(".weight-toggle");
 const eplan = document.querySelector(".plan");
 const planbtn = document.querySelector(".plan_button");
 
-let planlist = [{title: '', body: ''}];
+let notelist = [{title: '', body: ''}];
 
 function save(wlist){
     var newtitle = prompt("Please enter the date: ");
@@ -32,20 +32,18 @@ function save(wlist){
 
 function populatelist(loc) {
     loc.innerHTML= '';
-    if (loc === eplan){
-        for (let item of planlist) {
-            let elem = document.createElement("li");
-            let text = document.createTextNode(item.title);
-            elem.appendChild(text);
-            loc.appendChild(elem);
-        }
+    for (let item of notelist) {
+        let elem = document.createElement("li");
+        let text = document.createTextNode(item.title);
+        elem.appendChild(text);
+        loc.appendChild(elem);
     }
 }
 
 function showbodyplan(e){
     if (e.target !== e.currentTarget){
         var clickedNote = e.target.textContent;
-        for (let item of planlist) {
+        for (let item of notelist) {
             if (item.title === clickedNote){
                 textarea1.value = item.body;
             }
@@ -53,7 +51,7 @@ function showbodyplan(e){
     }
 }
 
-planbtn.addEventListener("click", save.bind(null, planlist), false);
+planbtn.addEventListener("click", save.bind(null, notelist), false);
 planbtn.addEventListener("click", populatelist.bind(null, eplan), false);
 eplan.addEventListener("click", showbodyplan, false);
 
