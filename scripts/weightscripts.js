@@ -4,6 +4,7 @@ const addbtn = document.querySelector(".blue_button");
 const unitWeight = document.querySelector(".weight-toggle");
 const eplan = document.querySelector(".plan");
 const planbtn = document.querySelector(".plan_button");
+const deletebtn = document.querySelector(".delete_button");
 
 let notelist = [{title: '', body: ''}];
 
@@ -39,6 +40,13 @@ function showbodyweight(e){
     }
 }
 
+function delete_(){
+    list.innerHTML = "";
+    for (i=0; i < notelist.length; i++){
+        notelist.pop();
+    }
+}
+
 document.getElementById("output").style.visibility="hidden";
 document.getElementById("lbsInput").addEventListener('input',
    function(e){
@@ -48,7 +56,10 @@ document.getElementById("lbsInput").addEventListener('input',
 	document.getElementById('kgOutput').innerHTML = lbs /2.2046
 });
 
+
+
 addbtn.addEventListener("click", save.bind(null, notelist), false);
 addbtn.addEventListener("click", populatelist.bind(null, list));
 list.addEventListener("click", showbodyweight, false);
+deletebtn.addEventListener("click", delete_, false);
 unitWeight.addEventListener("click", units);

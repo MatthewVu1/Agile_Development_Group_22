@@ -21,6 +21,7 @@ const addbtn = document.querySelector(".blue_button");
 const unitWeight = document.querySelector(".weight-toggle");
 const eplan = document.querySelector(".plan");
 const planbtn = document.querySelector(".plan_button");
+const deletebtn = document.querySelector(".delete_button");
 
 let notelist = [{title: '', body: ''}];
 
@@ -51,7 +52,15 @@ function showbodyplan(e){
     }
 }
 
+function delete_(){
+    eplan.innerHTML = "";
+    for (i=0; i < notelist.length; i++){
+        notelist.pop();
+    }
+}
+
 planbtn.addEventListener("click", save.bind(null, notelist), false);
 planbtn.addEventListener("click", populatelist.bind(null, eplan), false);
+deletebtn.addEventListener("click", delete_, false);
 eplan.addEventListener("click", showbodyplan, false);
 
