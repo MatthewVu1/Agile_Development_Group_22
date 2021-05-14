@@ -89,6 +89,7 @@ function showbodyplan(e){
         }
     }
 }
+
 function formula() {
 	var select = document.getElementById('selectOption');
  	var selectOption = select.options[select.selectedIndex].value;
@@ -118,6 +119,8 @@ function reset(){
 	document.getElementById("lbsInput").value="";
 	document.getElementById("lbsInput") .focus();
 }
+
+
 addbtn.addEventListener("click", save.bind(null, notelist), false);
 addbtn.addEventListener("click", populatelist.bind(null, list));
 planbtn.addEventListener("click", save.bind(null, planlist), false);
@@ -125,3 +128,14 @@ planbtn.addEventListener("click", populatelist.bind(null, plan), false);
 list.addEventListener("click", showbodyweight, false);
 plan.addEventListener("click", showbodyplan, false);
 unitWeight.addEventListener("click", units);
+
+const functions = {
+    delete_weight: (notelist) => {
+        pass
+    }
+    
+}
+
+module.exports = functions
+
+

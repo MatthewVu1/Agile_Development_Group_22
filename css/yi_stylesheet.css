@@ -97,8 +97,11 @@ button {
     background-color: #56949f;
     margin-left: -600px;
     margin-right: 40px;
-    margin-top: 40px;
-    
+    margin-top: 40px; 
+}
+.plan_button{
+    margin-top: 37px;
+    margin-left: -200px;
 }
 .weight-toggle {
     position: relative;
