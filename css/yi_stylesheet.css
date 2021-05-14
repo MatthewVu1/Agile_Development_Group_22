@@ -83,12 +83,28 @@ main {
     color: #000;
 }
 
+div#kgOutput, div#poundOutput, .card-success h4{
+    color: #000;
+}
+
 button#add {
     color: white;
     width: 2em;
     font-size: 2em;
     border-radius: 4em;
     margin-top: 2em;
+}
+
+button#del {
+    color: white;
+    width: 4em;
+    font-size: 2em;
+    border-radius: 4em;
+    margin-top: 2em;
+}
+
+.red_button {
+    background-color: red;
 }
 
 .blue_button {

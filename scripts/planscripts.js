@@ -21,7 +21,7 @@ const addbtn = document.querySelector(".blue_button");
 const unitWeight = document.querySelector(".weight-toggle");
 const eplan = document.querySelector(".plan");
 const planbtn = document.querySelector(".plan_button");
-const deletebtn = document.querySelector(".delete_button");
+const deletebtn = document.querySelector(".red_button");
 
 let notelist = [{title: '', body: ''}];
 
