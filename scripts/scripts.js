@@ -96,16 +96,18 @@ function formula() {
 
     if(selectOption === "pound") {
         reset();
-        document.getElementById("output").style.visibility ="visible";
+        document.getElementById("output").style.visibility ="hidden";
                 document.getElementById("lbsInput").addEventListener('input',function(e){
+                    document.getElementById("output").style.visibility ="visible";
                 let lbs = e.target.value;
                 document.getElementById('poundOutput').innerHTML=lbs *1
 	            document.getElementById('kgOutput').innerHTML = lbs /2.2046
 });
     }else if (selectOption === "kg") {
         reset();
-        document.getElementById("output").style.visibility = "visible";
+        document.getElementById("output").style.visibility = "hidden";
                 document.getElementById('lbsInput').addEventListener('input',function(e){
+                    document.getElementById("output").style.visibility ="visible";
 			    let lbs=e.target.value;
 			    document.getElementById('kgOutput').innerHTML=lbs * 1;
 	            document.getElementById('poundOutput').innerHTML = lbs * 2.20462;
