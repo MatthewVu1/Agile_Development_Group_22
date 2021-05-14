@@ -89,16 +89,35 @@ function showbodyplan(e){
         }
     }
 }
-document.getElementById("output").style.visibility='hidden';
-document.getElementById("lbsInput").addEventListener('input',
-   function(e){
-    document.getElementById("output").style.visibility ="visible";
-    let lbs = e.target.value;
-    document.getElementById('poundOutput').innerHTML=lbs *1
-	document.getElementById('kgOutput').innerHTML = lbs /2.2046
+function formula() {
+	var select = document.getElementById('selectOption');
+ 	var selectOption = select.options[select.selectedIndex].value;
+
+    if(selectOption === "pound") {
+        reset();
+        document.getElementById("output").style.visibility ="visible";
+                document.getElementById("lbsInput").addEventListener('input',function(e){
+                let lbs = e.target.value;
+                document.getElementById('poundOutput').innerHTML=lbs *1
+	            document.getElementById('kgOutput').innerHTML = lbs /2.2046
 });
+    }else if (selectOption === "kg") {
+        reset();
+        document.getElementById("output").style.visibility = "visible";
+                document.getElementById('lbsInput').addEventListener('input',function(e){
+			    let lbs=e.target.value;
+			    document.getElementById('kgOutput').innerHTML=lbs * 1;
+	            document.getElementById('poundOutput').innerHTML = lbs * 2.20462;
+})
 
-
+} else if(selectOption === "default"){
+    document.getElementById("output").style.visibility="hidden";
+    }
+}
+function reset(){
+	document.getElementById("lbsInput").value="";
+	document.getElementById("lbsInput") .focus();
+}
 addbtn.addEventListener("click", save.bind(null, notelist), false);
 addbtn.addEventListener("click", populatelist.bind(null, list));
 planbtn.addEventListener("click", save.bind(null, planlist), false);
