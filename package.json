@@ -1,0 +1,27 @@
+{
+  "name": "agilenodejs",
+  "version": "1.0.0",
+  "description": "node js for 2911",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatthewVu1/Agile_Development_Group_22.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatthewVu1/Agile_Development_Group_22/issues"
+  },
+  "homepage": "https://github.com/MatthewVu1/Agile_Development_Group_22#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
