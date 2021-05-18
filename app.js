@@ -13,8 +13,12 @@ app.set('views', './views')
 app.set('view engine', 'ejs')
 
 //display html
-app.get('', (req, res) =>{
+app.get('/yi_index.ejs', (req, res) =>{
     res.render('yi_index.ejs')
+})
+
+app.get('/plans.ejs', (req, res) =>{
+    res.render('plans.ejs')
 })
 
 // Listen on port
