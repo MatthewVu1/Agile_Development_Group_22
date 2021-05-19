@@ -16,7 +16,12 @@ function units() {
 
 function save(wlist){
     var newtitle = prompt("Please enter the date: ");
-    wlist.push({title: newtitle, body: textarea1.value});
+    if (lb === true){
+        wlist.push({title: newtitle, body: textarea1.value + 'lbs'});
+    }
+    if (lb === false){
+        wlist.push({title: newtitle, body: textarea1.value + 'kg'});
+    }
 }
 
 const sqlite3 = require('sqlite3').verbose();
