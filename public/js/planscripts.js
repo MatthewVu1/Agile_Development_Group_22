@@ -26,7 +26,7 @@ const deletebtn = document.querySelector(".red_button");
 let notelist = [{title: '', body: ''}];
 
 function save(wlist){
-    var newtitle = prompt("Please enter the date: ");
+    var newtitle = prompt("Please enter a title: ");
     wlist.push({title: newtitle, body: textarea1.value});
 }
 

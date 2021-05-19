@@ -47,7 +47,13 @@ nav li {
 
 .plan {
     list-style-type: none;
-    padding: 0 80%;
+    padding: 0 20%;;
+}
+
+ul.plan {
+    font-size: 24px;
+    font-weight: 600;
+    color: #569f6b;
 }
 
 .entries h2 {
