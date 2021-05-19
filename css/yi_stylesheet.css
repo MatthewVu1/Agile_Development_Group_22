@@ -207,9 +207,7 @@ textarea.text-area{
     font-size: 1em;
     resize: none;
 }
-.btn-block{
-    color:#569f6b;
-}
+
 @media screen and (max-width: 600px) {
     body {
         display: flex;
