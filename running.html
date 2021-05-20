@@ -22,36 +22,28 @@
       <div class="testbox">
         <form action="/">
           <div class="banner">
-            <h1>5K & 10K Registration Form</h1>
+            <h1>Weightlifting/Running Custom plan</h1>
           </div>
-          <p>Runner Information</p>
+          <p>Weightlifting/Running workout</p>
           <div class="item">
             <label for="name">Name<span>*</span></label>
             <input id="name" type="text" name="name" required/>
           </div>
           <div class="item">
-            <label for="email">Email Address<span>*</span></label>
-            <input id="email" type="email" name="email" required/>
+            <label for="age">Age<span>*</span></label>
+            <input id="age" type="number" name="age" required/>
           </div>
           <div class="item">
-            <label for="address">Address<span>*</span></label>
-            <input id="address" type="address" name="address" required/>
+            <label for="Bodyweight">Bodyweight<span>*</span></label>
+            <input id="Bodyweight" type="number" name="Bodyweight" required/>
           </div>
           <div class="item">
-            <label for="city">City<span>*</span></label>
-            <input id="city" type="text" name="city" required/>
+            <label for="Lift">Lift<span>*</span></label>
+            <input id="Lift" type="number" name="Lift" required/>
           </div>
           <div class="item">
-            <label for="state">State<span>*</span></label>
-            <input id="state" type="text" name="state" required/>
-          </div>
-          <div class="item">
-            <label for="zip">Zip<span>*</span></label>
-            <input id="zip" type="text" name="zip" required/>
-          </div>
-          <div class="item">
-            <label for="phone">Phone<span>*</span></label>
-            <input id="phone" type="number" name="phone" required/>
+            <label for="Repetition">Repetition<span>*</span></label>
+            <input id="Repetition" type="number" name="Repetition" required/>
           </div>
           <div class="item">
             <label for="bdate">Date of Birth<span>*</span></label>
@@ -72,12 +64,15 @@
             </div>
           </div>
           <div class="item">
-            <p>T-Shirt Size</p>
+            <p>Workout options</p>
             <select>
               <option selected value="" disabled selected></option>
-              <option value="course-type" >Small</option>
-              <option value="short-courses">Medium</option>
-              <option value="featured-courses">Large</option>
+              <option value="course-type" >Benchpress</option>
+              <option value="short-courses">Treadmill</option>
+              <option value="featured-courses">Eliptical</option>
+              <option vlaue="course-type" >Squats</option>
+              <option value="course-type" >Shoulder press</option>
+              <option value="course-type" >Push-up </option>
               <option value="undergraduate">Extra Large</option>
             </select>
           </div>
@@ -94,9 +89,11 @@
               </div>
             </div>
           </div>
-          <div class="btn-block">
-            <button type="submit" href="/">SUBMIT</button>
-          </div>
+          <form action="https://formspree.io/f/xrgrpddg" method="post">
+            <label for="email">Your Email</label>
+            <input name="Email" id="email" type="email">
+            <button type="submit">Submit</button>
+          </form>
         </form>
       </div>
     </main>
