@@ -200,7 +200,9 @@ textarea.text-area{
     margin-top: 1vh;
     resize: none;
 }
-
+.name-item{
+    
+}
 .text-area.plans {
     width: 30%;
     height: 100%;
