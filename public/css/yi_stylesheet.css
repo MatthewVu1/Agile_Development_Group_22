@@ -73,7 +73,7 @@ main {
 }
 .col-md-6{
     justify-content: center;
-    margin-top: 70px;
+    margin-top: 60px;
 }
 .card-primary{
     background-color:#0275d8;
@@ -115,6 +115,13 @@ button#del {
 
 .blue_button {
     background-color: #56949f;
+    margin-left: -600px;
+    margin-right: 40px;
+    margin-top: 40px; 
+}
+.plan_button{
+    margin-top: 37px;
+    margin-left: -200px;
 }
 
 .plan_button {
@@ -199,7 +206,9 @@ textarea.text-area{
     margin-top: 1vh;
     resize: none;
 }
-
+.name-item{
+    
+}
 .text-area.plans {
     width: 30%;
     height: 100%;

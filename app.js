@@ -32,9 +32,9 @@ app.set('views', './views')
 app.set('view engine', 'ejs')
 
 //display html
-app.get('', (req, res) =>{
+app.get('/', (req, res) =>{
     // res.render('yi_index.ejs')
-    let sql = `SELECT Date date, Weight weight, Unit unit FROM WeightTrack
+    let sql = `SELECT Date date FROM WeightTrack
     ORDER BY EntryID`;
 
     db.all(sql, [], (err, rows) => {
