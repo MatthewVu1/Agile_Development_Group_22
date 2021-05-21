@@ -23,7 +23,7 @@ const eplan = document.querySelector(".plan");
 const planbtn = document.querySelector(".plan_button");
 const deletebtn = document.querySelector(".red_button");
 
-let notelist = [{title: '', body: ''}];
+// let notelist = [{title: '', body: ''}];
 
 function save(wlist){
     var newtitle = prompt("Please enter a title: ");
@@ -31,15 +31,15 @@ function save(wlist){
 }
 
 
-function populatelist(loc) {
-    loc.innerHTML= '';
-    for (let item of notelist) {
-        let elem = document.createElement("li");
-        let text = document.createTextNode(item.title);
-        elem.appendChild(text);
-        loc.appendChild(elem);
-    }
-}
+// function populatelist(loc) {
+//     loc.innerHTML= '';
+//     for (let item of notelist) {
+//         let elem = document.createElement("li");
+//         let text = document.createTextNode(item.title);
+//         elem.appendChild(text);
+//         loc.appendChild(elem);
+//     }
+// }
 
 function showbodyplan(e){
     if (e.target !== e.currentTarget){

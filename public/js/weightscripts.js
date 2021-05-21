@@ -6,8 +6,6 @@ const eplan = document.querySelector(".plan");
 const planbtn = document.querySelector(".plan_button");
 const deletebtn = document.querySelector(".red_button");
 
-let notelist = [];
-
 let lb = false;
 
 function units() {
@@ -24,43 +22,15 @@ function save(wlist){
     }
 }
 
-const sqlite3 = require('sqlite3').verbose();
-
-let db = new sqlite3.Database('./sqlite3/test.db', sqlite3.OPEN_READWRITE, (err) => {
-    if (err) {
-      console.error(err.message);
-    }
-    console.log('Connected to the database.');
-  });
-
-  let sql = `SELECT Date date, Weight weight, Unit unit FROM WeightTrack
-             ORDER BY EntryID`;
-  
-let notelist = [];
-  db.all(sql, [], (err, rows) => {
-    if (err) {
-      throw err;
-    }
-    rows.forEach((row) => {
-      console.log(row.date);
-      console.log(row.weight);
-      console.log(row.unit);
-      let entry = {title: row.date, body: row.weight + row.unit};
-      notelist.push(entry)
-      
-      console.log(notelist);
-    });
-  });
-
-function populatelist(loc) {
-loc.innerHTML= '';
-for (let item of notelist) {
-    let elem = document.createElement("li");
-    let text = document.createTextNode(item.title);
-    elem.appendChild(text);
-    loc.appendChild(elem);
-    }
-}
+// function populatelist(loc) {
+// loc.innerHTML= '';
+// for (let item of notelist) {
+//     let elem = document.createElement("li");
+//     let text = document.createTextNode(item.title);
+//     elem.appendChild(text);
+//     loc.appendChild(elem);
+//     }
+// }
 
 function showbodyweight(e){
     if (e.target !== e.currentTarget){

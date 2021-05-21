@@ -19,7 +19,8 @@ let db = new sqlite3.Database('./sqlite3/test.db', sqlite3.OPEN_READWRITE, (err)
       console.log(row.weight);
       console.log(row.unit);
       let entry = [{title: row.date, body: row.weight + row.unit}];
-      console.log(entry)
+      notelist.push(entry)
+      console.log(notelist)
     });
   });
   

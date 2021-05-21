@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weight Tracking</title>
+    <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="css/yi_stylesheet.css">
     <script src="js/weightscripts.js" defer></script>
 </head>
@@ -27,6 +28,11 @@
         <div class="entries">
             <h2>My Entries</h2>
             <ul class='weight'>
+                <% for (const facts of _data) { %>
+                <li>
+                    <%= facts.date %> <%= facts.weight %> <%= facts.unit %>
+                </li>
+                <% } %>
             </ul>
             <ul class='plan'>
             </ul>
