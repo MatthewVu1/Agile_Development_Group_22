@@ -30,7 +30,8 @@
             <ul class='weight'>
                 <% for (const facts of _data) { %>
                 <li>
-                    <%= facts.date %> <%= facts.weight %> <%= facts.unit %>
+                    <%= facts.entryid %> <%= facts.date %>
+                     <%= facts.weight %> <%= facts.unit %>
                 </li>
                 <% } %>
             </ul>
@@ -73,7 +74,21 @@
          </div>
     </div>
         <div class="text-box">
-            <textarea class ='text-area' placeholder="Please enter a weight"></textarea>
+            <form action="/new" method="POST">
+                <input type="text" name="weight" placeholder="Enter your weight"/>
+                <input type="text" name="date" placeholder="Enter the date"/>
+                <input type="submit" value="Click here to submit the form"/>
+            </form>
+            <form action="/edit" method="POST">
+                <input type="text" name="weight" placeholder="Enter your edited weight"/>
+                <input type="text" name="id" placeholder="Enter the entry # you want to change"/>
+                <input type="submit" value="Click here to edit"/>
+            </form>
+            <form action="/delete" method="POST">
+                <input type="text" name="id" placeholder="Enter the entry # you want to remove"/>
+                <input type="submit" value="Click here to remove"/>
+            </form>
+            <!-- <textarea class ='text-area' placeholder="Please enter a weight"></textarea> -->
             <div class="weight-toggle">
                 <input type="checkbox">
                 <div class="slider round"></div>
