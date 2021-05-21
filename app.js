@@ -45,7 +45,20 @@ app.set('view engine', 'ejs')
 //         });
 //       });
 
-app.get('/', (req, res) =>{
+app.get('', (req, res) =>{
+  let sql = `SELECT EntryID entryid, Date date, Weight weight, Unit unit FROM WeightTrack
+  ORDER BY EntryID`;
+
+  db.all(sql, [], (err, rows) => {
+      if (err) {
+        throw err;
+      }
+      res.render('yi_index.ejs', { _data : rows});
+      });
+    });
+
+
+app.get('/yi_index.ejs', (req, res) =>{
     let sql = `SELECT EntryID entryid, Date date, Weight weight, Unit unit FROM WeightTrack
     ORDER BY EntryID`;
 
