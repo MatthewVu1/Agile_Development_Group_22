@@ -128,5 +128,9 @@ app.get('/plans.ejs', (req, res) =>{
     res.render('plans.ejs')
 })
 
+app.get('/running.ejs', (req, res) =>{
+  res.render('running.ejs')
+})
+
 // Listen on port
 app.listen(port, () => console.log(`Listening on port ` + port))
