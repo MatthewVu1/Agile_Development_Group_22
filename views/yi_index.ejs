@@ -17,8 +17,13 @@
         <h1>Weight Tracking</h1>
         <nav>
             <ul>
+<<<<<<< HEAD:views/yi_index.ejs
                 <li><a>Running/Weightlifting<br>Tracking</a></li>
                 <li><a href="plans.ejs" title="Plan a Custom Workout">Custom Plans</a></li>
+=======
+                <li><a href="running.html" title="Track and Custom different Running/Weighlifting Workout">Running/Weightlifting<br>Tracking</a></li>
+                <li><a href="plans.html" title="Plan a Custom Workout">Custom Plans</a></li>
+>>>>>>> 1f9087bdb777009e068b4d291d01f38558fb7ece:yi_index.html
             </ul>
         </nav>
     </header>
@@ -48,7 +53,7 @@
                     <input id="lbsInput" type="number" class=" form-control form-control-lg" placeholder="Input Value..." autocomplete="off">
                 </div>
             <div class="col col-4">
-			<select id="selectOption" name="selectOption" class="form-control form-control-lg">
+			<select id="selectOption" name="selectOption" class="form-control form-control-lg" onchange="formula(this)">
 				<option selected value="default">From...</option>
 				<option value="kg">Kg</option>
 				<option value="pound" >Pound</option>
