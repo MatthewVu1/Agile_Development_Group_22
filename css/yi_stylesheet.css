@@ -206,6 +206,10 @@ textarea.text-area{
     font-size: 1em;
     resize: none;
 }
+.testbox{
+    text-align: center;
+    border: 0.5px solid rgb(255, 181, 181);
+}
 
 @media screen and (max-width: 600px) {
     body {
