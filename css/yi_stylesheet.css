@@ -208,34 +208,16 @@ textarea.text-area{
 }
 .testbox{
     text-align: center;
-    position: relative;   
+    position: relative;
+    border: 1px solid black;
+    display: table;   
+    display: grid;
 }
+
 img{
     float: left;
     max-width: 50%;
     max-height: 30%;
-}
-.showcase header{    
-    padding: 40px 100px;
-    z-index: 300;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width:100%;
-}
-.showcase header ul{
-    text-align: center;
-}
-.showcase header ul li{
-    list-style: none;
-    display: inline-block;
-}
-.showcase ul li a {
-    display: block;
-    text-decoration: none;
-    text-transform: none;
-    padding: 25px;
-    transition: all ease 0.5s;
 }
 .showcase video{
     position: absolute;
