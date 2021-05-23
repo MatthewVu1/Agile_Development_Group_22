@@ -209,11 +209,18 @@ textarea.text-area{
 .testbox{
     text-align: center;
     position: relative;
-    border: 1px solid black;
-    display: table;   
-    display: grid;
+    border: 1px solid black; 
+    display: block;
+    margin-left:auto ;
+    margin-right: auto;
+    justify-content: center;
 }
-
+.testbox input, textarea, select, button{
+    width: 150px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 img{
     float: left;
     max-width: 50%;
