@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weight Tracking</title>
-    <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="css/yi_stylesheet.css">
     <script src="js/weightscripts.js" defer></script>
 </head>
@@ -14,9 +13,11 @@
 
 <body>
     <header class="center">
+        <img src="images/Logo design.png" alt="Ftness Pro design">
         <h1>Weight Tracking</h1>
         <nav>
             <ul>
+                <li><a href="login.ejs" title="Login Page">Fitness Tracker Pro</a></li>
                 <li><a href="running.ejs" title="Track and Custom different Running/Weighlifting Workout">Running/Weightlifting<br>Tracking</a></li>
                 <li><a href="plans.ejs" title="Plan a Custom Workout">Custom Plans</a></li>
             </ul>
@@ -73,34 +74,26 @@
              </div> 
          </div>
     </div>
-        <div class="text-box">
-            <form action="/new" method="POST">
-                <input type="text" name="weight" placeholder="Enter your weight"/>
-                <input type="text" name="date" placeholder="Enter the date"/>
-                <input type="submit" value="Click here to submit the form"/>
-            </form>
-            <form action="/edit" method="POST">
-                <input type="text" name="weight" placeholder="Enter your edited weight"/>
-                <input type="text" name="id" placeholder="Enter the entry # you want to change"/>
-                <input type="submit" value="Click here to edit"/>
-            </form>
-            <form action="/delete" method="POST">
-                <input type="text" name="id" placeholder="Enter the entry # you want to remove"/>
-                <input type="submit" value="Click here to remove"/>
-            </form>
-            <!-- <textarea class ='text-area' placeholder="Please enter a weight"></textarea> -->
-            <div class="weight-toggle">
-                <input type="checkbox">
-                <div class="slider round"></div>
-        </div>
-        </div>
+    <div class="text-box">
+        <form action="/new" method="POST">
+            <input type="text" name="weight" placeholder="Enter your weight"/>
+            <input type="text" name="date" placeholder="Enter the date"/>
+            <input type="submit" value="Click here to submit the form"/>
+        </form>
+        <form action="/edit" method="POST">
+            <input type="text" name="weight" placeholder="Enter your edited weight"/>
+            <input type="text" name="id" placeholder="Enter the entry # you want to change"/>
+            <input type="submit" value="Click here to edit"/>
+        </form>
+        <form action="/delete" method="POST">
+            <input type="text" name="id" placeholder="Enter the entry # you want to remove"/>
+            <input type="submit" value="Click here to remove"/>
+        </form>
+        <!-- <textarea class ='text-area' placeholder="Please enter a weight"></textarea> -->
+        <div class="weight-toggle">
+            <input type="checkbox">
+            <div class="slider round"></div>
 
-        <!-- <div class="bottom center">
-            <button class="blue_button" id="add" type="button">+
-            </button>
-            <button class="red_button" id="del" type="button">Clear
-            </button>
-        </div> -->
         
     </main>
 </body>

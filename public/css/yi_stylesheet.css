@@ -1,7 +1,7 @@
 body {
     display: grid;
     grid-template-rows: 20vh 80vh;
-    color: #56949f;
+    color: white;
     margin: 0;
 }
 
@@ -12,7 +12,7 @@ body {
 
 
 header {
-    background-color: #f2e9de;
+    background-color: #212c4a;
     grid-row: 1/2;
     width: 100%;
 }
@@ -27,7 +27,7 @@ nav ul {
 nav {
     width: 100%;
     align-items: center;
-    background-color: #fffaf3;
+    background-color: #31416d;
     font-size: 1.2em;
 }
 
@@ -47,13 +47,7 @@ nav li {
 
 .plan {
     list-style-type: none;
-    padding: 0 20%;;
-}
-
-ul.plan {
-    font-size: 24px;
-    font-weight: 600;
-    color: #569f6b;
+    padding: 0 80%;
 }
 
 .entries h2 {
@@ -61,7 +55,7 @@ ul.plan {
 }
 
 main {
-    background-color: #f2e9de;
+    background-color: #b3ae52;
     display: grid;
     grid-template-rows: 1fr 0.2fr 1.2fr;
 }
@@ -206,16 +200,82 @@ textarea.text-area{
     margin-top: 1vh;
     resize: none;
 }
-.name-item{
-    
-}
 .text-area.plans {
     width: 30%;
     height: 100%;
     font-size: 1em;
     resize: none;
 }
-
+.testbox{
+    text-align: center;
+    position: relative;
+    border: 1px solid black; 
+    display: block;
+    margin-left:auto ;
+    margin-right: auto;
+    justify-content: center;
+}
+.testbox input, textarea, select, button{
+    width: 150px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    float: left;
+    max-width: 50%;
+    max-height: 30%;
+}
+.showcase header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.showcase video{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+.overlay{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: #9aa7ca;
+  mix-blend-mode: overlay;
+}
+.social{
+    position: absolute;
+    bottom: 20px;
+    z-index:10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social li{
+    list-style: none;
+}
+.social li a {
+    display: inline-block;
+    filter: invert(1);
+    margin-right: 20px;
+    transform: scale(0.5);
+    transition: 0.5s;
+}
+.social li a:hover{
+    transform: scale(0.5) translateY(-15px);
+}
 @media screen and (max-width: 600px) {
     body {
         display: flex;
