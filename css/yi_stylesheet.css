@@ -221,10 +221,7 @@ img{
     max-width: 50%;
     max-height: 30%;
 }
-.nav-home{
-    
 
-}
 .showcase video{
     position:  absolute;
     top:0;
@@ -252,7 +249,6 @@ img{
     color: #fff;
     transition: 0.4s;
 }
-*/ The video by the youtube side.
 
 @media screen and (max-width: 600px) {
     body {
