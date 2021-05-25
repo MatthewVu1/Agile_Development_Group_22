@@ -59,33 +59,6 @@ main {
     display: grid;
     grid-template-rows: 1fr 0.2fr 1.2fr;
 }
-.container{
-    text-align: center;
-    height: 80px;
-    width: 20%;
-    position: absolute;
-}
-.col-md-6{
-    justify-content: center;
-    margin-top: 60px;
-}
-.card-primary{
-    background-color:#0275d8;
-}
-.card-primary h4{
-    color: #000;
-}
-.card-success{
-    background-color: #5cb85c;
-    align-items: center;
-}
-.card-success h4{
-    color: #000;
-}
-
-div#kgOutput, div#poundOutput, .card-success h4{
-    color: #000;
-}
 
 button#add {
     color: white;
