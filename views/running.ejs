@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/yi_stylesheet.css" rel="stylesheet">
+    <title>Running/Weightlifting Tracking</title>
+</head>
+<body>
+    <header class="center">
+      <img src="images/Logo design.png" alt="Ftness Pro design">
+        <h1>Running/Weightlifting Tracking</h1>
+        <nav>
+            <ul>
+                <li><a href="login.ejs" title="Login Page">Fitness Tracker Pro</a></li>
+                <li><a href="yi_index.ejs" title="Track your Weight">Weight Tracking</a></li>
+                <li><a href="plans.ejs" title="Plan a Custom Workout">Custom Plans</a></li>
+            </ul>
+        </nav> 
+    </header>
+    <main>
+      <div class="testbox">
+          <div class="banner">
+            <h1>Weightlifting/Running Custom plan</h1>
+          </div>
+          <p>Weightlifting/Running workout</p>
+          <div class="item-name">
+            <label for="name">Name<span>*</span></label>
+            <input id="name" type="text" name="name" required/>
+          </div>
+          <div class="item-age">
+            <label for="age">Age<span>*</span></label>
+            <input id="age" type="number" name="age" required/>
+          </div>
+          <div class="item-Bodyweight">
+            <label for="Bodyweight">Bodyweight<span>*</span></label>
+            <input id="Bodyweight" type="number" name="Bodyweight" required/>
+          </div>
+          <div class="item-lift">
+            <label for="Lift">Lift<span>*</span></label>
+            <input id="Lift" type="number" name="Lift" required/>
+          </div>
+          <div class="item-Repetition">
+            <label for="Repetition">Repetition<span>*</span></label>
+            <input id="Repetition" type="number" name="Repetition" required/>
+          </div>
+          <div class="item-goalweight">
+            <label for="bdate">Goal Weight<span>*</span></label>
+            <input id="goalweight" type="date" name="goalweight" required/>
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <div class="question">
+            <label>Gender</label>
+            <div class="question-answer">
+              <div>
+                <input type="radio" value="none" id="radio_1" name="gender"/>
+                <label for="radio_1" class="radio"><span>Male</span></label>
+              </div>
+              <div>
+                <input  type="radio" value="none" id="radio_2" name="gender"/>
+                <label for="radio_2" class="radio"><span>Female</span></label>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <p>Workout options</p>
+            <select>
+              <option selected value="" disabled selected></option>
+              <option value="course-type" >Benchpress</option>
+              <option value="short-courses">Treadmill</option>
+              <option value="featured-courses">Eliptical</option>
+              <option vlaue="course-type" >Squats</option>
+              <option value="course-type" >Shoulder press</option>
+              <option value="course-type" >Push-up </option>
+              <option value="undergraduate">Side-ways plank</option>
+            </select>
+          </div>
+          <div class="question">
+            <label>Workout activity</label>
+            <div class="question-answer">
+              <div>
+                <input type="radio" value="none" id="radio_3" name="Easy"/>
+                <label for="radio_3" class="radio"><span>Easy</span></label>
+              </div>
+              <div>
+                <input  type="radio" value="none" id="radio_4" name="Hard"/>
+                <label for="radio_4" class="radio"><span>Hard</span></label>
+              </div>
+            </div>
+          </div>
+          <form action="https://formspree.io/f/mrgrpdvg" method="post">
+            <label for="email">Your Email</label>
+            <input name="Email" id="email" type="email">
+            <button type="submit">Submit</button>
+          </form>
+          <form accept="https://formspree.io/f/mrgrpdvg" method="post">
+            <label for="message"> message</label>
+            <textarea name="textbox" id="notes" class="textbox" rows="4">Message</textarea>
+          </form>
+      </div>
+    </main>
+</body>
+
+</html>
