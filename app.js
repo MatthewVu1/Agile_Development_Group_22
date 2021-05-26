@@ -21,19 +21,6 @@ let db = new sqlite3.Database('./db/test.db', sqlite3.OPEN_READWRITE, (err) => {
 app.set('views', './views')
 app.set('view engine', 'ejs')
 
-//display html
-app.get('', (req, res) =>{
-  let sql = `SELECT EntryID entryid, Date date, Weight weight, Unit unit FROM WeightTrack
-  ORDER BY EntryID`;
-
-  db.all(sql, [], (err, rows) => {
-      if (err) {
-        throw err;
-      }
-      res.render('yi_index.ejs', { _data : rows});
-      });
-    });
-
 
 app.get('/yi_index.ejs', (req, res) =>{
     let sql = `SELECT EntryID entryid, Date date, Weight weight, Unit unit FROM WeightTrack
@@ -59,9 +46,6 @@ app.get('/login.ejs', (req, res) =>{
 var appjs = require('./public/js/weightscripts')
 console.log(appjs.newEntry());
 newEntry = appjs.newEntry()
-// console.log(newEntry.date);
-// console.log(newEntry.weight);
-// console.log(newEntry.unit);
 
 app.use(express.urlencoded({
   extended: true
