@@ -46,10 +46,6 @@ app.get('/yi_index.ejs', (req, res) =>{
         res.render('yi_index.ejs', { _data : rows});
         });
       });
-
-app.get('/plans.ejs', (req, res) =>{
-  res.render('plans.ejs')
-})
     
 app.get('/running.ejs', (req, res) =>{
   res.render('running.ejs')
@@ -63,9 +59,9 @@ app.get('/login.ejs', (req, res) =>{
 var appjs = require('./public/js/weightscripts')
 console.log(appjs.newEntry());
 newEntry = appjs.newEntry()
-console.log(newEntry.date);
-console.log(newEntry.weight);
-console.log(newEntry.unit);
+// console.log(newEntry.date);
+// console.log(newEntry.weight);
+// console.log(newEntry.unit);
 
 app.use(express.urlencoded({
   extended: true
@@ -124,7 +120,7 @@ app.get('/plans.ejs', (req, res) =>{
       if (err) {
         throw err;
       }
-      res.render('plans.ejs', { plans : rows});
+      res.render('plans.ejs', {plans : rows});
       });
     });
 
