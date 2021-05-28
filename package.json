@@ -1,6 +1,9 @@
 {
   "name": "agilenodejs",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.15.4"
+  },
   "description": "node js for 2911",
   "main": "index.js",
   "scripts": {
