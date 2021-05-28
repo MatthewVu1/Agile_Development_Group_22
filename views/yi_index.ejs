@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Tracking</title>
+    <link rel="stylesheet" href="css/yi_stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&display=swap" rel="stylesheet">
+    <script src="js/weightscripts.js" defer></script>
+</head>
+
+
+<body>
+    <header class="center">
+        <img src="images/Logo design.png" alt="Ftness Pro design">
+        <h1>Weight Tracking</h1>
+        <nav>
+            <ul>
+                <li><a href="/" title="Login Page">Home</a></li>
+                <li><a href="running.ejs" title="Track and Custom different Running/Weighlifting Workout">Running/Weightlifting<br>Tracking</a></li>
+                <li><a href="plans.ejs" title="Plan a Custom Workout">Custom Plans</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="entries">
+            <h2>My Entries</h2>
+            <ul class='weight'>
+                <% for (const facts of _data) { %>
+                <li>
+                    <%= facts.entryid %> <%= facts.date %>
+                     <%= facts.weight %> <%= facts.unit %>
+                </li>
+                <% } %>
+            </ul>
+            <ul class='plan'>
+            </ul>
+        </div>
+    <div class="text-box">
+        <form action="/new" method="POST">
+            <input type="text" name="weight" placeholder="Enter your weight"/>
+            <input type="text" name="date" placeholder="Enter the date"/>
+            <input type="submit" value="Click here to submit the form"/>
+        </form>
+        <form action="/edit" method="POST">
+            <input type="text" name="weight" placeholder="Enter your edited weight"/>
+            <input type="text" name="id" placeholder="ID to edit"/>
+            <input type="submit" value="Click here to edit"/>
+        </form>
+        <form action="/delete" method="POST">
+            <input type="text" name="id" placeholder="ID to delete"/>
+            <input type="submit" value="Click here to remove"/>
+        </form>
+    </div>
+        <div class="button-headers">
+            <h3>New Entry</h3>
+            <h3>Edit Entry</h3>
+            <h3>Delete Entry</h3>
+        </div>
+        
+    </main>
+</body>
+
+</html>
