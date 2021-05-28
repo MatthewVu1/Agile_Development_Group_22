@@ -38,7 +38,7 @@ app.get('/running.ejs', (req, res) =>{
   res.render('running.ejs')
 })
     
-app.get('/login.ejs', (req, res) =>{
+app.get('/', (req, res) =>{
   res.render('login.ejs')
 })
     
@@ -64,7 +64,7 @@ app.post("/new", (req, res) => {
     if (err) {
       return console.log(err.message);
     }
-    res.redirect("/");
+    res.redirect("/yi_index.ejs");
 });
 });
 
@@ -78,7 +78,7 @@ app.post("/edit", (req, res) => {
     if (err) {
       return console.log(err.message);
     }
-    res.redirect("/");
+    res.redirect("/yi_index.ejs");
   });
 });
 
@@ -90,7 +90,7 @@ app.post("/delete", (req, res) => {
     if (err) {
       return console.error(err.message);
     }
-    res.redirect("/");
+    res.redirect("/yi_index.ejs");
   });
 });
 
