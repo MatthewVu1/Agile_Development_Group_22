@@ -37,32 +37,31 @@
             </ul>
         </div>
 
-        <!-- <div class="text-box">
-            <textarea class ='text-area plans' placeholder="Please enter your plan"></textarea> -->
             <div class="text-box">
                 <form action="/newplan" method="POST">
-                    <textarea class ='text-area plans' name="plan" placeholder="Please enter your plan"></textarea>
                     <input type="text" name="title" placeholder="Enter the title of your plan"/>
+                    <textarea class ='text-area plans' name="plan" placeholder="Please enter your plan"></textarea>
+                    <!-- <input type="text" name="title" placeholder="Enter the title of your plan"/> -->
                     <input type="submit" value="Click here to submit the form"/>
                 </form>
                 <form action="/editplan" method="POST">
-                    <input type="text" name="plan" placeholder="Enter your edited plan"/>
-                    <input type="text" name="id" placeholder="Enter the entry # you want to change"/>
+                    <!-- <input type="text" name="plan" placeholder="Enter your edited plan"/> -->
+                    <input type="text" name="id" placeholder="ID to edit"/>
+                    <textarea class ='text-area plans' name="plan" placeholder="Enter your edited plan"></textarea>
                     <input type="submit" value="Click here to edit"/>
                 </form>
                 <form action="/deleteplan" method="POST">
-                    <input type="text" name="id" placeholder="Enter the entry # you want to remove"/>
+                    <input type="text" name="id" placeholder="ID to delete"/>
                     <input type="submit" value="Click here to remove"/>
                 </form>
             </div>
-        
 
-        <!-- <div class="bottom center">
-             <button class="plan_button" id="plan" type="button">Add Plan
-        </button>
-        <button class="red_button" id="del" type="button">clear
-        </button>
-        </div> -->
+            <div class="button-headers">
+                <h3>New Plan</h3>
+                <h3>Edit Plan</h3>
+                <h3>Delete Plan</h3>
+            </div>
+
     </main>
 </body>
 

@@ -43,7 +43,7 @@ nav li {
 }
 
 .entries {
-    margin: 6vh 0;
+    margin: 10vh 0;
 }
 
 .weight {
@@ -64,7 +64,7 @@ nav li {
 main {
     background-color: #b3ae52;
     display: grid;
-    grid-template-rows: 1fr 0.2fr 1.2fr;
+    grid-template-rows: 1fr 0.25fr 1fr;
 }
 
 button#add {
@@ -168,11 +168,17 @@ input:checked + .slider:after {
 
 .text-box {
     display: flex;
-    justify-content: center;
-    grid-row: 2/3;
-    height: 100%;
+    justify-content: space-evenly;
+    grid-row: 3/3;
+    height: 80%;
 }
 
+.button-headers {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 10vw;
+    grid-row: 2/3;
+}
 textarea.text-area{
     width: 30%;
     height: 20px;
@@ -181,10 +187,11 @@ textarea.text-area{
     resize: none;
 }
 .text-area.plans {
-    width: 30%;
+    width: 100%;
     height: 100%;
     font-size: 1em;
     resize: none;
+    display: flex;
 }
 .testbox{
     text-align: center;
